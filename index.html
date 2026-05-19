@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reclamação Trabalhista — Assis & Carvalho Advocacia e Assessoria Jurídica</title>
+<meta name="description" content="Mais de 10 anos defendendo trabalhadores. Verbas rescisórias, horas extras, carteira não assinada, assédio, insalubridade. Análise gratuita do seu caso.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Outfit:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5EFE3;
+    --cream-2:#EDE4D2;
+    --paper:#FBF7EE;
+    --ink:#1A140E;
+    --ink-soft:#3B2F23;
+    --muted:#6B5C4A;
+    --line:#D9CDB6;
+    --wine:#6E1320;
+    --wine-deep:#4A0D17;
+    --gold:#B08A3E;
+    --gold-soft:#D9B871;
+    --green-wa:#1FA855;
+    --green-wa-deep:#157A3D;
+    --green-wa-soft:#25D366;
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Outfit',system-ui,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  .container{max-width:1240px;margin:0 auto;padding:0 28px}
+  .serif{font-family:'Fraunces',serif;font-variation-settings:"opsz" 144}
+  .italic-serif{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400}
+
+  /* ========== NOISE OVERLAY ========== */
+  body::before{
+    content:'';
+    position:fixed;inset:0;
+    pointer-events:none;z-index:1;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.06'/%3E%3C/svg%3E");
+    mix-blend-mode:multiply;
+  }
+
+  /* ========== HEADER ========== */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(245,239,227,.85);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 28px;max-width:1240px;margin:0 auto;
+  }
+  .logo{
+    display:flex;align-items:center;gap:14px;
+  }
+  .logo-mark{
+    width:54px;height:54px;flex-shrink:0;
+    display:grid;place-items:center;
+  }
+  .logo-mark svg{width:100%;height:100%;display:block}
+  .logo-text{line-height:1.05}
+  .logo-text .name{
+    font-family:'Cinzel',serif;font-weight:600;
+    font-size:15px;letter-spacing:.08em;color:var(--ink);
+    text-transform:uppercase;
+  }
+  .logo-text .sub{
+    font-size:9px;color:var(--muted);letter-spacing:.22em;
+    text-transform:uppercase;margin-top:3px;
+  }
+  /* Big footer logo */
+  .foot-logo{
+    display:flex;flex-direction:column;align-items:flex-start;gap:14px;
+  }
+  .foot-logo .mono{width:96px;height:96px}
+  .foot-logo .mono svg{width:100%;height:100%;display:block}
+  .foot-logo .brand-text{
+    font-family:'Cinzel',serif;font-weight:600;
+    font-size:20px;letter-spacing:.12em;color:var(--gold-soft);
+    text-transform:uppercase;line-height:1.1;
+  }
+  .foot-logo .brand-rule{
+    width:80px;height:1px;background:var(--gold-soft);
+    margin:6px 0 4px;opacity:.6;
+  }
+  .foot-logo .brand-tag{
+    font-size:10px;color:rgba(245,239,227,.65);
+    letter-spacing:.25em;text-transform:uppercase;
+  }
+  .nav-links{display:flex;align-items:center;gap:34px}
+  .nav-links a{font-size:14px;color:var(--ink-soft);font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--wine)}
+  .nav-cta{
+    background:var(--green-wa);color:#fff;
+    padding:11px 20px;border-radius:999px;
+    font-size:14px;font-weight:500;letter-spacing:.02em;
+    transition:transform .2s,background .2s,box-shadow .2s;
+    display:inline-flex;align-items:center;gap:8px;
+    box-shadow:0 6px 16px -6px rgba(31,168,85,.5);
+  }
+  .nav-cta:hover{background:var(--green-wa-deep);transform:translateY(-1px);box-shadow:0 10px 22px -6px rgba(31,168,85,.6)}
+  @media (max-width:880px){.nav-links a:not(.nav-cta){display:none}}
+
+  /* ========== HERO ========== */
+  .hero{
+    position:relative;padding:80px 0 110px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:'';position:absolute;
+    top:-200px;right:-200px;width:700px;height:700px;
+    background:radial-gradient(circle at center,rgba(110,19,32,.10),transparent 60%);
+    z-index:0;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.15fr .85fr;gap:80px;
+    align-items:center;position:relative;z-index:2;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:12px;font-weight:500;letter-spacing:.22em;
+    text-transform:uppercase;color:var(--wine);
+    margin-bottom:28px;
+    animation:fadeUp .6s ease-out both;
+  }
+  .eyebrow::before{
+    content:'';width:32px;height:1px;background:var(--wine);
+  }
+  h1.hero-title{
+    font-family:'Fraunces',serif;
+    font-variation-settings:"opsz" 144;
+    font-weight:500;
+    font-size:clamp(42px,5.5vw,76px);
+    line-height:1.02;letter-spacing:-.02em;
+    color:var(--ink);
+    margin-bottom:28px;
+    animation:fadeUp .7s .1s ease-out both;
+  }
+  h1.hero-title .accent{
+    font-style:italic;color:var(--wine);font-weight:400;
+  }
+  h1.hero-title .under{
+    background-image:linear-gradient(transparent 70%,var(--gold-soft) 70%);
+    background-size:100% 100%;background-repeat:no-repeat;
+    padding:0 .08em;
+  }
+  .hero-sub{
+    font-size:19px;color:var(--ink-soft);max-width:560px;
+    margin-bottom:36px;line-height:1.55;
+    animation:fadeUp .7s .2s ease-out both;
+  }
+  .hero-actions{
+    display:flex;flex-wrap:wrap;gap:14px;align-items:center;
+    animation:fadeUp .7s .3s ease-out both;
+  }
+  .btn-wa{
+    background:var(--green-wa);color:#fff;
+    padding:18px 28px;border-radius:999px;
+    font-size:16px;font-weight:500;letter-spacing:.01em;
+    display:inline-flex;align-items:center;gap:12px;
+    transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s;
+    box-shadow:0 12px 30px -10px rgba(31,168,85,.55);
+  }
+  .btn-wa:hover{
+    transform:translateY(-3px);
+    background:var(--green-wa-deep);
+    box-shadow:0 20px 40px -10px rgba(31,168,85,.65);
+  }
+  .btn-wa svg{width:20px;height:20px}
+  .btn-secondary{
+    color:var(--ink);padding:18px 24px;
+    border-bottom:1px solid var(--ink);
+    font-size:15px;font-weight:500;
+    transition:opacity .2s;
+  }
+  .btn-secondary:hover{opacity:.6}
+  .trust-row{
+    margin-top:48px;display:flex;align-items:center;gap:24px;
+    flex-wrap:wrap;
+    animation:fadeUp .7s .4s ease-out both;
+  }
+  .trust-item{
+    display:flex;align-items:center;gap:10px;
+    font-size:13px;color:var(--muted);
+  }
+  .trust-item strong{color:var(--ink);font-weight:600;font-family:'Fraunces',serif;font-size:14px}
+  .trust-dot{width:5px;height:5px;border-radius:50%;background:var(--gold)}
+
+  /* Hero visual card */
+  .hero-card{
+    position:relative;
+    animation:fadeUp .8s .35s ease-out both;
+  }
+  .hero-card-main{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:36px 32px;
+    box-shadow:0 30px 60px -25px rgba(26,20,14,.25);
+    position:relative;
+    transform:rotate(-1deg);
+  }
+  .hero-card-main::before{
+    content:'CLT';
+    position:absolute;top:-22px;left:32px;
+    background:var(--ink);color:var(--cream);
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:13px;letter-spacing:.3em;
+    padding:7px 14px;border-radius:4px;
+    transform:rotate(2deg);
+  }
+  .case-label{
+    font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:14px;
+  }
+  .case-num{
+    font-family:'Instrument Serif',serif;font-style:italic;
+    font-size:64px;line-height:1;color:var(--wine);
+    margin-bottom:6px;
+  }
+  .case-desc{
+    font-family:'Fraunces',serif;font-size:19px;
+    color:var(--ink);line-height:1.3;margin-bottom:28px;
+    font-weight:500;
+  }
+  .case-list{list-style:none;display:flex;flex-direction:column;gap:14px}
+  .case-list li{
+    display:flex;align-items:flex-start;gap:12px;
+    font-size:14px;color:var(--ink-soft);
+    padding-bottom:14px;border-bottom:1px dashed var(--line);
+  }
+  .case-list li:last-child{border-bottom:none;padding-bottom:0}
+  .case-list li::before{
+    content:'';flex-shrink:0;width:6px;height:6px;border-radius:50%;
+    background:var(--wine);margin-top:7px;
+  }
+  .hero-stamp{
+    position:absolute;bottom:-28px;right:-28px;
+    width:140px;height:140px;border-radius:50%;
+    background:var(--gold);color:var(--ink);
+    display:grid;place-items:center;text-align:center;
+    border:2px solid var(--ink);
+    transform:rotate(8deg);
+    font-family:'Fraunces',serif;
+    box-shadow:0 14px 30px -10px rgba(26,20,14,.4);
+  }
+  .hero-stamp .big{font-size:34px;font-weight:600;line-height:1}
+  .hero-stamp .sm{font-size:9px;letter-spacing:.2em;text-transform:uppercase;margin-top:4px}
+
+  @media (max-width:980px){
+    .hero{padding:48px 0 80px}
+    .hero-grid{grid-template-columns:1fr;gap:60px}
+    .hero-card-main{transform:none}
+    .hero-stamp{right:-10px;bottom:-20px;width:110px;height:110px}
+    .hero-stamp .big{font-size:26px}
+  }
+
+  /* ========== ALERT BAR ========== */
+  .alertbar{
+    background:var(--ink);color:var(--cream);
+    padding:14px 0;position:relative;z-index:2;
+    border-top:1px solid var(--wine);
+    border-bottom:1px solid var(--wine);
+    overflow:hidden;
+  }
+  .marquee{
+    display:flex;gap:60px;
+    animation:slide 40s linear infinite;
+    white-space:nowrap;
+  }
+  .marquee span{
+    font-family:'Fraunces',serif;font-size:14px;
+    letter-spacing:.04em;color:var(--cream);
+    display:inline-flex;align-items:center;gap:60px;
+  }
+  .marquee span::after{
+    content:'✦';color:var(--gold);font-size:12px;
+  }
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ========== SECTION HEAD ========== */
+  section{position:relative;z-index:2}
+  .sec-head{
+    text-align:center;margin-bottom:60px;
+  }
+  .sec-label{
+    font-size:12px;letter-spacing:.25em;text-transform:uppercase;
+    color:var(--wine);margin-bottom:18px;font-weight:500;
+  }
+  .sec-title{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:clamp(32px,4vw,52px);line-height:1.08;
+    letter-spacing:-.02em;color:var(--ink);
+    max-width:780px;margin:0 auto;
+  }
+  .sec-title em{font-style:italic;color:var(--wine);font-weight:400}
+  .sec-desc{
+    margin-top:18px;color:var(--ink-soft);
+    font-size:17px;max-width:620px;margin-left:auto;margin-right:auto;
+  }
+
+  /* ========== SERVICES ========== */
+  .services{padding:110px 0 80px;background:var(--cream)}
+  .services-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+  }
+  .svc-card{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:32px 26px;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .25s,box-shadow .35s;
+    cursor:pointer;
+    position:relative;overflow:hidden;
+  }
+  .svc-card::after{
+    content:'';position:absolute;left:0;right:0;bottom:0;height:3px;
+    background:var(--wine);transform:scaleX(0);transform-origin:left;
+    transition:transform .4s cubic-bezier(.2,.8,.2,1);
+  }
+  .svc-card:hover{
+    transform:translateY(-6px);
+    border-color:var(--wine);
+    box-shadow:0 24px 40px -20px rgba(26,20,14,.22);
+  }
+  .svc-card:hover::after{transform:scaleX(1)}
+  .svc-num{
+    font-family:'Instrument Serif',serif;font-style:italic;
+    font-size:38px;color:var(--gold);line-height:1;margin-bottom:18px;
+  }
+  .svc-title{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:21px;line-height:1.2;margin-bottom:14px;color:var(--ink);
+  }
+  .svc-desc{
+    font-size:14px;color:var(--ink-soft);line-height:1.55;
+  }
+  @media (max-width:980px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.services-grid{grid-template-columns:1fr}}
+
+  /* ========== CLT BANNER ========== */
+  .clt-banner{
+    position:relative;
+    padding:110px 0;
+    color:var(--cream);
+    overflow:hidden;
+    isolation:isolate;
+    background:
+      linear-gradient(90deg,rgba(7,28,56,.95) 0%,rgba(10,40,82,.78) 45%,rgba(10,40,82,.35) 100%),
+      url('carteira-trabalho.jpg') center right/cover no-repeat,
+      linear-gradient(135deg,#0A2540 0%,#15407C 50%,#0A2540 100%);
+  }
+  .clt-banner::before{
+    content:'';position:absolute;inset:0;z-index:-1;
+    background-image:
+      radial-gradient(circle at 10% 90%,rgba(176,138,62,.18),transparent 40%),
+      url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Ccircle cx='5' cy='5' r='2'/%3E%3C/g%3E%3C/svg%3E");
+    background-size:auto,80px 80px;
+  }
+  .clt-banner::after{
+    content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 1200 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 200 Q300 100 600 220 T1200 180' stroke='%23ffffff' stroke-opacity='0.08' fill='none' stroke-width='1'/%3E%3Cpath d='M0 260 Q300 160 600 280 T1200 240' stroke='%23ffffff' stroke-opacity='0.06' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+    background-size:cover;background-position:center;
+  }
+  .clt-grid{
+    display:grid;grid-template-columns:1.2fr 1fr;gap:60px;
+    align-items:center;
+  }
+  .clt-content .sec-label{color:var(--gold-soft);margin-bottom:18px}
+  .clt-content h2{
+    font-family:'Fraunces',serif;font-weight:400;
+    font-size:clamp(34px,4.4vw,58px);line-height:1.05;
+    letter-spacing:-.02em;margin-bottom:24px;color:var(--cream);
+  }
+  .clt-content h2 em{
+    color:var(--gold-soft);font-style:italic;font-weight:400;
+  }
+  .clt-content p{
+    color:rgba(245,239,227,.85);font-size:17px;
+    line-height:1.6;margin-bottom:30px;max-width:520px;
+  }
+  .clt-chips{
+    display:flex;flex-wrap:wrap;gap:10px;margin-bottom:36px;
+  }
+  .clt-chips span{
+    background:rgba(245,239,227,.08);
+    border:1px solid rgba(245,239,227,.2);
+    color:var(--cream);
+    font-size:13px;padding:8px 14px;border-radius:999px;
+    backdrop-filter:blur(4px);
+  }
+  .clt-side{
+    display:flex;justify-content:center;align-items:center;
+    position:relative;min-height:520px;
+  }
+  .clt-book{
+    width:100%;max-width:360px;
+    filter:drop-shadow(0 40px 60px rgba(0,0,0,.55)) drop-shadow(0 10px 20px rgba(0,0,0,.4));
+    transform:rotate(-6deg);
+    animation:cltFloat 6s ease-in-out infinite;
+  }
+  @keyframes cltFloat{
+    0%,100%{transform:rotate(-6deg) translateY(0)}
+    50%{transform:rotate(-5deg) translateY(-12px)}
+  }
+  .clt-glow{
+    position:absolute;width:500px;height:500px;border-radius:50%;
+    background:radial-gradient(circle,rgba(176,138,62,.18),transparent 65%);
+    pointer-events:none;z-index:0;
+  }
+  @media (max-width:880px){
+    .clt-grid{grid-template-columns:1fr}
+    .clt-banner{
+      background:
+        linear-gradient(180deg,rgba(7,28,56,.9) 0%,rgba(10,40,82,.85) 100%),
+        url('carteira-trabalho.jpg') center/cover no-repeat,
+        linear-gradient(135deg,#0A2540 0%,#15407C 50%,#0A2540 100%);
+      padding:80px 0;
+    }
+  }
+
+  /* ========== AUTHORITY ========== */
+  .authority{
+    padding:110px 0;background:var(--ink);color:var(--cream);
+    position:relative;overflow:hidden;
+  }
+  .authority::before{
+    content:'';position:absolute;inset:0;
+    background:radial-gradient(circle at 80% 30%,rgba(176,138,62,.12),transparent 50%);
+    z-index:0;
+  }
+  .auth-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+    position:relative;z-index:2;
+  }
+  .auth-side .sec-label{color:var(--gold-soft)}
+  .auth-side h2{
+    font-family:'Fraunces',serif;font-weight:400;
+    font-size:clamp(34px,4vw,56px);line-height:1.05;
+    margin-bottom:28px;letter-spacing:-.02em;
+  }
+  .auth-side h2 em{color:var(--gold-soft);font-style:italic}
+  .auth-side p{
+    color:rgba(245,239,227,.78);
+    font-size:16px;line-height:1.7;margin-bottom:18px;
+  }
+  .stats{
+    display:grid;grid-template-columns:1fr 1fr;gap:0;
+    border-top:1px solid rgba(245,239,227,.15);
+    border-bottom:1px solid rgba(245,239,227,.15);
+    margin-top:36px;
+  }
+  .stat{
+    padding:26px 20px;
+    border-right:1px solid rgba(245,239,227,.15);
+  }
+  .stat:nth-child(even){border-right:none}
+  .stat-num{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:46px;line-height:1;color:var(--cream);
+    margin-bottom:6px;letter-spacing:-.02em;
+  }
+  .stat-num sub{font-size:18px;color:var(--gold-soft);vertical-align:super;font-weight:400}
+  .stat-label{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:rgba(245,239,227,.6);
+  }
+  /* Lawyer photo card */
+  .lawyer-card{
+    position:relative;
+    border-radius:20px;overflow:hidden;
+    background:linear-gradient(160deg,#2A2118,#0F0B07);
+    border:1px solid rgba(176,138,62,.35);
+    box-shadow:0 40px 80px -30px rgba(0,0,0,.6);
+  }
+  .lawyer-photo-wrap{
+    position:relative;
+    aspect-ratio:4/5;
+    background:
+      radial-gradient(ellipse at 50% 100%,rgba(176,138,62,.18),transparent 60%),
+      linear-gradient(180deg,#F5EFE3 0%,#E8DFCB 100%);
+    overflow:hidden;
+  }
+  .lawyer-photo-wrap img,
+  .lawyer-photo-wrap .photo-fallback{
+    position:absolute;inset:0;
+    width:100%;height:100%;
+    object-fit:cover;object-position:center top;
+    display:block;
+    transition:transform .8s cubic-bezier(.2,.8,.2,1);
+  }
+  .lawyer-card:hover .lawyer-photo-wrap img,
+  .lawyer-card:hover .lawyer-photo-wrap .photo-fallback{transform:scale(1.03)}
+  .lawyer-photo-wrap .photo-fallback{z-index:1}
+  .lawyer-photo-wrap img{z-index:2;background:#F5EFE3}
+  .lawyer-photo-wrap::after{
+    content:'';position:absolute;inset:0;z-index:2;
+    background:
+      linear-gradient(180deg,transparent 0%,transparent 50%,rgba(15,11,7,.55) 75%,rgba(15,11,7,.98) 100%);
+    pointer-events:none;
+  }
+  .lawyer-badge{
+    position:absolute;top:18px;left:18px;z-index:4;
+    background:rgba(15,11,7,.78);
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    color:var(--gold-soft);
+    font-family:'Cinzel',serif;font-size:10px;
+    letter-spacing:.3em;padding:8px 14px;
+    border-radius:999px;text-transform:uppercase;
+    border:1px solid rgba(176,138,62,.4);
+  }
+  .lawyer-name-strip{
+    position:absolute;bottom:0;left:0;right:0;z-index:4;
+    padding:36px 30px 26px;color:var(--cream);
+    background:linear-gradient(180deg,transparent 0%,rgba(15,11,7,.85) 35%,rgba(15,11,7,.98) 100%);
+  }
+  .lawyer-name-strip .nm{
+    font-family:'Fraunces',serif;font-weight:600;
+    font-size:28px;line-height:1.1;letter-spacing:-.01em;
+    margin-bottom:8px;color:#fff;
+    text-shadow:0 2px 12px rgba(0,0,0,.6);
+  }
+  .lawyer-name-strip .rl{
+    font-size:11px;color:var(--gold-soft);
+    letter-spacing:.22em;text-transform:uppercase;
+    font-weight:500;
+    text-shadow:0 1px 8px rgba(0,0,0,.5);
+  }
+  .lawyer-quote{
+    padding:32px 30px 30px;position:relative;
+  }
+  .lawyer-quote::before{
+    content:'"';position:absolute;top:-18px;left:24px;
+    font-family:'Fraunces',serif;font-style:italic;
+    font-size:90px;line-height:1;color:var(--gold);
+    opacity:.6;
+  }
+  .lawyer-quote p{
+    font-family:'Fraunces',serif;font-style:italic;
+    font-size:17px;line-height:1.5;color:var(--cream);
+    margin-top:12px;
+  }
+  .lawyer-quote .sig{
+    display:flex;align-items:center;gap:10px;
+    margin-top:18px;padding-top:16px;
+    border-top:1px solid rgba(245,239,227,.12);
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--gold-soft);
+  }
+  .lawyer-quote .sig svg{width:16px;height:16px}
+  @media (max-width:980px){.auth-grid{grid-template-columns:1fr;gap:50px}}
+
+  /* ========== PROCESS ========== */
+  .process{padding:110px 0;background:var(--cream-2);}
+  .process-steps{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+    margin-top:60px;
+  }
+  .step{
+    position:relative;padding-top:30px;
+  }
+  .step::before{
+    content:attr(data-num);
+    position:absolute;top:-30px;left:0;
+    font-family:'Instrument Serif',serif;font-style:italic;
+    font-size:90px;color:var(--gold);
+    line-height:1;opacity:.85;
+  }
+  .step::after{
+    content:'';position:absolute;top:20px;left:60px;right:-12px;height:1px;
+    background:linear-gradient(to right,var(--line),transparent);
+  }
+  .step:last-child::after{display:none}
+  .step h4{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:22px;line-height:1.2;color:var(--ink);
+    margin-bottom:12px;padding-top:8px;
+  }
+  .step p{font-size:14px;color:var(--ink-soft);line-height:1.55}
+  @media (max-width:980px){
+    .process-steps{grid-template-columns:1fr 1fr}
+    .step::after{display:none}
+  }
+  @media (max-width:560px){.process-steps{grid-template-columns:1fr}}
+
+  /* ========== TESTIMONIAL STRIP ========== */
+  .testimonials{padding:100px 0;background:var(--cream)}
+  .testi-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+    margin-top:60px;
+  }
+  .testi{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:32px 28px;
+    display:flex;flex-direction:column;gap:18px;
+    transition:transform .3s,box-shadow .3s;
+  }
+  .testi:hover{transform:translateY(-4px);box-shadow:0 18px 30px -16px rgba(26,20,14,.18)}
+  .testi-stars{color:var(--gold);font-size:18px;letter-spacing:2px}
+  .testi-text{
+    font-family:'Fraunces',serif;font-size:17px;line-height:1.45;
+    color:var(--ink);font-weight:400;
+  }
+  .testi-author{
+    display:flex;align-items:center;gap:12px;margin-top:auto;
+    padding-top:18px;border-top:1px solid var(--line);
+  }
+  .ta-avatar{
+    width:38px;height:38px;border-radius:50%;
+    background:var(--wine);color:var(--cream);
+    display:grid;place-items:center;
+    font-family:'Fraunces',serif;font-weight:600;font-size:14px;
+  }
+  .ta-name{font-weight:500;font-size:14px;color:var(--ink)}
+  .ta-info{font-size:12px;color:var(--muted)}
+  @media (max-width:880px){.testi-grid{grid-template-columns:1fr}}
+
+  /* ========== FAQ ========== */
+  .faq{padding:110px 0;background:var(--paper)}
+  .faq-list{max-width:860px;margin:60px auto 0}
+  .faq-item{
+    border-bottom:1px solid var(--line);
+    padding:24px 0;
+    cursor:pointer;
+    transition:padding .3s;
+  }
+  .faq-q{
+    display:flex;justify-content:space-between;align-items:flex-start;
+    gap:32px;
+  }
+  .faq-q h4{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:20px;line-height:1.3;color:var(--ink);
+    flex:1;transition:color .25s;
+  }
+  .faq-item:hover .faq-q h4{color:var(--wine)}
+  .faq-toggle{
+    flex-shrink:0;width:32px;height:32px;border-radius:50%;
+    border:1px solid var(--line);
+    display:grid;place-items:center;
+    transition:background .25s,border-color .25s,transform .3s;
+    font-family:'Fraunces',serif;font-size:18px;line-height:1;
+    color:var(--ink);
+  }
+  .faq-item.open .faq-toggle{
+    background:var(--wine);color:var(--cream);border-color:var(--wine);
+    transform:rotate(45deg);
+  }
+  .faq-a{
+    max-height:0;overflow:hidden;
+    transition:max-height .4s ease,padding-top .4s ease;
+  }
+  .faq-a-inner{
+    color:var(--ink-soft);font-size:16px;line-height:1.65;
+    max-width:90%;
+  }
+  .faq-item.open .faq-a{max-height:500px;padding-top:18px}
+
+  /* ========== LEAD FORM ========== */
+  .leadform{
+    padding:110px 0;
+    background:linear-gradient(160deg,var(--wine-deep),var(--wine));
+    color:var(--cream);position:relative;overflow:hidden;
+  }
+  .leadform::before{
+    content:'';position:absolute;
+    width:600px;height:600px;border-radius:50%;
+    background:radial-gradient(circle,rgba(176,138,62,.22),transparent 60%);
+    top:-200px;left:-150px;z-index:0;
+  }
+  .leadform::after{
+    content:'';position:absolute;
+    width:500px;height:500px;border-radius:50%;
+    background:radial-gradient(circle,rgba(26,20,14,.35),transparent 60%);
+    bottom:-200px;right:-100px;z-index:0;
+  }
+  .form-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+    position:relative;z-index:2;
+  }
+  .form-copy .sec-label{color:var(--gold-soft)}
+  .form-copy h2{
+    font-family:'Fraunces',serif;font-weight:400;
+    font-size:clamp(34px,4vw,52px);line-height:1.05;
+    margin-bottom:24px;letter-spacing:-.02em;color:var(--cream);
+  }
+  .form-copy h2 em{color:var(--gold-soft);font-style:italic}
+  .form-copy p{color:rgba(245,239,227,.85);font-size:17px;line-height:1.65;margin-bottom:24px}
+  .form-bullets{list-style:none;margin-top:30px;display:flex;flex-direction:column;gap:14px}
+  .form-bullets li{
+    display:flex;align-items:flex-start;gap:12px;
+    font-size:15px;color:rgba(245,239,227,.92);
+  }
+  .form-bullets svg{flex-shrink:0;width:20px;height:20px;color:var(--gold-soft);margin-top:2px}
+  .form-card{
+    background:var(--cream);color:var(--ink);
+    border-radius:18px;padding:42px 36px;
+    box-shadow:0 40px 80px -30px rgba(26,20,14,.5);
+  }
+  .form-card h3{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:26px;line-height:1.15;margin-bottom:8px;letter-spacing:-.01em;
+  }
+  .form-card .small{font-size:14px;color:var(--muted);margin-bottom:26px}
+  .field{margin-bottom:16px;position:relative}
+  .field label{
+    display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:8px;font-weight:500;
+  }
+  .field input,.field select,.field textarea{
+    width:100%;padding:14px 16px;
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:10px;
+    font-family:inherit;font-size:15px;color:var(--ink);
+    transition:border-color .2s,background .2s;
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none;border-color:var(--wine);background:#fff;
+  }
+  .field textarea{resize:vertical;min-height:90px}
+  .form-card button{
+    width:100%;background:var(--green-wa);color:#fff;
+    padding:16px;border:none;border-radius:999px;
+    font-family:inherit;font-size:16px;font-weight:500;
+    cursor:pointer;
+    transition:background .25s,transform .2s,box-shadow .25s;
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    margin-top:10px;
+    box-shadow:0 10px 24px -10px rgba(31,168,85,.55);
+  }
+  .form-card button:hover{background:var(--green-wa-deep);transform:translateY(-2px);box-shadow:0 16px 32px -10px rgba(31,168,85,.7)}
+  .form-card .disclaimer{
+    font-size:11px;color:var(--muted);margin-top:14px;text-align:center;line-height:1.5;
+  }
+  @media (max-width:980px){.form-grid{grid-template-columns:1fr;gap:50px}}
+
+  /* ========== FINAL CTA ========== */
+  .finalcta{
+    padding:120px 0;background:var(--cream);text-align:center;
+    position:relative;
+  }
+  .finalcta h2{
+    font-family:'Fraunces',serif;font-weight:400;
+    font-size:clamp(38px,5vw,68px);line-height:1.05;
+    letter-spacing:-.02em;max-width:880px;margin:0 auto 30px;
+  }
+  .finalcta h2 em{color:var(--wine);font-style:italic}
+  .finalcta p{
+    color:var(--ink-soft);font-size:18px;
+    max-width:580px;margin:0 auto 40px;line-height:1.6;
+  }
+
+  /* ========== FOOTER ========== */
+  footer{
+    background:var(--ink);color:var(--cream);
+    padding:80px 0 30px;position:relative;z-index:2;
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:60px;
+    padding-bottom:50px;border-bottom:1px solid rgba(245,239,227,.15);
+  }
+  .foot-brand .logo-mark{background:var(--cream);color:var(--wine);border-color:var(--cream);box-shadow:inset 0 0 0 3px var(--ink)}
+  .foot-brand .name{color:var(--cream)}
+  .foot-brand .sub{color:rgba(245,239,227,.5)}
+  .foot-brand p{
+    color:rgba(245,239,227,.7);font-size:14px;line-height:1.6;
+    margin-top:20px;max-width:340px;
+  }
+  .foot-col h5{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:15px;color:var(--gold-soft);
+    margin-bottom:18px;letter-spacing:.04em;
+  }
+  .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .foot-col a,.foot-col li{
+    color:rgba(245,239,227,.75);font-size:14px;line-height:1.5;
+    transition:color .2s;
+  }
+  .foot-col a:hover{color:var(--gold-soft)}
+  .foot-bottom{
+    padding-top:28px;display:flex;justify-content:space-between;
+    align-items:center;flex-wrap:wrap;gap:14px;
+    font-size:12px;color:rgba(245,239,227,.5);
+  }
+  @media (max-width:880px){.foot-grid{grid-template-columns:1fr;gap:40px}}
+
+  /* ========== STICKY WHATSAPP ========== */
+  .sticky-wa{
+    position:fixed;bottom:24px;right:24px;z-index:60;
+    background:var(--green-wa);color:#fff;
+    padding:14px 22px 14px 18px;border-radius:999px;
+    display:flex;align-items:center;gap:10px;
+    box-shadow:0 16px 40px -8px rgba(31,168,85,.55);
+    font-size:14px;font-weight:500;
+    animation:pulseWA 2.4s ease-in-out infinite;
+    transition:transform .25s;
+  }
+  .sticky-wa:hover{transform:scale(1.04)}
+  .sticky-wa svg{width:22px;height:22px}
+  @keyframes pulseWA{
+    0%,100%{box-shadow:0 16px 40px -8px rgba(31,168,85,.55)}
+    50%{box-shadow:0 16px 50px -4px rgba(31,168,85,.8)}
+  }
+  @media (max-width:560px){
+    .sticky-wa span{display:none}
+    .sticky-wa{padding:14px;border-radius:50%}
+  }
+
+  /* ========== ANIMATIONS ========== */
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+  .reveal{opacity:0;transform:translateY(20px);transition:opacity .8s ease,transform .8s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+
+  /* utility */
+  ::selection{background:var(--wine);color:var(--cream)}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Assis & Carvalho">
+          <defs>
+            <linearGradient id="goldHdr" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F2D58C"/>
+              <stop offset="42%" stop-color="#D4A951"/>
+              <stop offset="100%" stop-color="#8B6A1F"/>
+            </linearGradient>
+          </defs>
+          <g fill="url(#goldHdr)" font-family="'Cinzel',serif" font-weight="500">
+            <text x="6" y="92" font-size="108" letter-spacing="-8">A</text>
+            <text x="50" y="92" font-size="108" letter-spacing="-8">C</text>
+          </g>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <div class="name">Assis &amp; Carvalho</div>
+        <div class="sub">Advocacia e Assessoria Jurídica</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#servicos">Atuação</a>
+      <a href="#quem">Quem somos</a>
+      <a href="#processo">Como atuamos</a>
+      <a href="#faq">Dúvidas</a>
+      <a class="nav-cta" href="https://wa.me/5599981490417" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.83 14.06c-.25.7-1.43 1.34-2 1.41-.51.06-1.18.09-1.89-.12-.44-.13-1-.31-1.71-.62-3.01-1.3-4.97-4.32-5.12-4.52-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.59-.37.79-.37.2 0 .39 0 .57.01.18.01.42-.07.66.5.25.59.83 2.06.91 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.61.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.4-.25.66-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.35.07.13.07.75-.18 1.45z"/></svg>
+        Falar com advogada
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-side">
+        <div class="eyebrow">Direito do Trabalho • Atendimento online em todo o Brasil</div>
+        <h1 class="hero-title">
+          Lute pelos seus direitos <span class="accent">garantidos</span> pela <span class="under">CLT.</span>
+        </h1>
+        <p class="hero-sub">
+          Verbas rescisórias atrasadas, horas extras não pagas, carteira não assinada ou assédio no ambiente de trabalho — você pode reaver o que é seu por direito. <strong>Análise gratuita</strong> do seu caso, sem compromisso.
+        </p>
+        <div class="hero-actions">
+          <a class="btn-wa" href="https://wa.me/5599981490417" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.83 14.06c-.25.7-1.43 1.34-2 1.41-.51.06-1.18.09-1.89-.12-.44-.13-1-.31-1.71-.62-3.01-1.3-4.97-4.32-5.12-4.52-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.59-.37.79-.37.2 0 .39 0 .57.01.18.01.42-.07.66.5.25.59.83 2.06.91 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.61.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.4-.25.66-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.35.07.13.07.75-.18 1.45z"/></svg>
+            Quero falar com a advogada
+          </a>
+          <a class="btn-secondary" href="#servicos">Ver áreas de atuação →</a>
+        </div>
+        <div class="trust-row">
+          <div class="trust-item"><strong>10+</strong> anos no Direito do Trabalho</div>
+          <div class="trust-dot"></div>
+          <div class="trust-item"><strong>100%</strong> online em todo o Brasil</div>
+          <div class="trust-dot"></div>
+          <div class="trust-item">Resposta <strong>em até 24h</strong></div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-main">
+          <div class="case-label">CASO RECENTE — RECONHECIMENTO DE VÍNCULO</div>
+          <div class="case-num">R$ 47.300</div>
+          <div class="case-desc">recuperados em verbas rescisórias para auxiliar de serviços gerais demitida sem registro em carteira.</div>
+          <ul class="case-list">
+            <li>FGTS retroativo + multa de 40%</li>
+            <li>Férias vencidas e proporcionais (+1/3)</li>
+            <li>13º salário e aviso prévio</li>
+            <li>Liberação do seguro-desemprego</li>
+          </ul>
+        </div>
+        <div class="hero-stamp">
+          <div>
+            <div class="big">CLT</div>
+            <div class="sm">do seu lado</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALERT MARQUEE ============ -->
+<div class="alertbar">
+  <div class="marquee">
+    <span>Carteira não assinada</span>
+    <span>Horas extras irregulares</span>
+    <span>Rescisão indireta</span>
+    <span>Assédio moral</span>
+    <span>Insalubridade & periculosidade</span>
+    <span>Acidente de trabalho</span>
+    <span>Atraso de salários</span>
+    <span>Desvio de função</span>
+    <span>Carteira não assinada</span>
+    <span>Horas extras irregulares</span>
+    <span>Rescisão indireta</span>
+    <span>Assédio moral</span>
+    <span>Insalubridade & periculosidade</span>
+    <span>Acidente de trabalho</span>
+    <span>Atraso de salários</span>
+    <span>Desvio de função</span>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-label">Áreas de Atuação</div>
+      <h2 class="sec-title">Defendemos <em>cada direito</em> previsto na legislação trabalhista.</h2>
+      <p class="sec-desc">Atuamos de forma estratégica em ações individuais e coletivas, sempre com foco em recuperar o que pertence ao trabalhador.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card reveal">
+        <div class="svc-num">01</div>
+        <h3 class="svc-title">Carteira de trabalho não assinada</h3>
+        <p class="svc-desc">Reconhecimento do vínculo, depósito retroativo do FGTS, verbas devidas e regularização perante o INSS.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">02</div>
+        <h3 class="svc-title">Demissão e rescisão indireta</h3>
+        <p class="svc-desc">Análise da modalidade correta de saída, recálculo das verbas e ingresso de rescisão indireta quando há justa causa do empregador.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">03</div>
+        <h3 class="svc-title">Horas extras e jornada irregular</h3>
+        <p class="svc-desc">Levantamento da jornada real, adicional noturno, intervalos suprimidos e diferenças salariais com cinco anos retroativos.</p>
+      </div>
+      <div class="svc-card reveal">
+        <div class="svc-num">04</div>
+        <h3 class="svc-title">Acidente, insalubridade e periculosidade</h3>
+        <p class="svc-desc">Indenizações por danos morais e materiais, adicionais devidos, estabilidade acidentária e benefícios previdenciários.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLT BANNER ============ -->
+<section class="clt-banner">
+  <div class="container">
+    <div class="clt-grid">
+      <div class="clt-content reveal">
+        <div class="sec-label">Carteira de Trabalho & CLT</div>
+        <h2>Sua carteira de trabalho é a <em>prova viva</em> dos seus direitos.</h2>
+        <p>Cada anotação, hora extra, função e adicional registrados — ou que <strong>deveriam</strong> ter sido registrados — pode ser revisto e reclamado. A CLT protege o trabalhador, e nós sabemos exatamente como exigir que ela seja cumprida.</p>
+        <div class="clt-chips">
+          <span>FGTS + multa de 40%</span>
+          <span>Férias + 1/3</span>
+          <span>13º proporcional</span>
+          <span>Aviso prévio</span>
+          <span>Seguro-desemprego</span>
+        </div>
+        <a class="btn-wa" href="https://wa.me/5599981490417" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.83 14.06c-.25.7-1.43 1.34-2 1.41-.51.06-1.18.09-1.89-.12-.44-.13-1-.31-1.71-.62-3.01-1.3-4.97-4.32-5.12-4.52-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.59-.37.79-.37.2 0 .39 0 .57.01.18.01.42-.07.66.5.25.59.83 2.06.91 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.61.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.4-.25.66-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.35.07.13.07.75-.18 1.45z"/></svg>
+          Quero analisar minha carteira
+        </a>
+      </div>
+      <div class="clt-side reveal">
+        <div class="clt-glow"></div>
+        <svg class="clt-book" viewBox="0 0 360 500" xmlns="http://www.w3.org/2000/svg" aria-label="Carteira de Trabalho e Previdência Social">
+          <defs>
+            <linearGradient id="cltCover" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#2C5BCE"/>
+              <stop offset="45%" stop-color="#1E40A8"/>
+              <stop offset="100%" stop-color="#0E2570"/>
+            </linearGradient>
+            <linearGradient id="cltSheen" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="rgba(255,255,255,.22)"/>
+              <stop offset="40%" stop-color="rgba(255,255,255,.05)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+            </linearGradient>
+            <linearGradient id="cltSide" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="rgba(0,0,0,.45)"/>
+              <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+            </linearGradient>
+          </defs>
+
+          <!-- pages edge -->
+          <rect x="14" y="22" width="318" height="466" rx="5" fill="#E8E1CF"/>
+          <line x1="14" y1="44" x2="332" y2="44" stroke="#C9BC9A" stroke-width=".5"/>
+          <line x1="14" y1="58" x2="332" y2="58" stroke="#C9BC9A" stroke-width=".5"/>
+
+          <!-- cover -->
+          <rect x="6" y="14" width="320" height="472" rx="6" fill="url(#cltCover)"/>
+          <rect x="6" y="14" width="320" height="472" rx="6" fill="url(#cltSheen)"/>
+          <rect x="6" y="14" width="40" height="472" rx="6" fill="url(#cltSide)"/>
+
+          <!-- top text -->
+          <text x="166" y="60" font-family="'Cinzel',serif" font-weight="500" font-size="11" fill="rgba(255,255,255,.92)" text-anchor="middle" letter-spacing="1.2">REPÚBLICA FEDERATIVA DO BRASIL</text>
+          <text x="166" y="78" font-family="'Cinzel',serif" font-weight="500" font-size="9" fill="rgba(255,255,255,.78)" text-anchor="middle" letter-spacing="1">MINISTÉRIO DO TRABALHO E EMPREGO</text>
+
+          <!-- coat of arms simplified -->
+          <g transform="translate(166,200)" stroke="rgba(255,255,255,.78)" fill="none" stroke-width=".9">
+            <!-- rays outer ring -->
+            <circle cx="0" cy="0" r="58" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.5)"/>
+            <g stroke="rgba(255,255,255,.45)" stroke-width=".6">
+              <line x1="0" y1="-66" x2="0" y2="-58"/>
+              <line x1="46" y1="-46" x2="41" y2="-41"/>
+              <line x1="66" y1="0" x2="58" y2="0"/>
+              <line x1="46" y1="46" x2="41" y2="41"/>
+              <line x1="0" y1="66" x2="0" y2="58"/>
+              <line x1="-46" y1="46" x2="-41" y2="41"/>
+              <line x1="-66" y1="0" x2="-58" y2="0"/>
+              <line x1="-46" y1="-46" x2="-41" y2="-41"/>
+            </g>
+            <!-- star -->
+            <path d="M0,-44 L11,-14 L42,-14 L17,5 L26,34 L0,17 L-26,34 L-17,5 L-42,-14 L-11,-14 Z" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.7)"/>
+            <!-- inner circle -->
+            <circle cx="0" cy="0" r="16" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.6)"/>
+            <!-- small stars inside -->
+            <g fill="rgba(255,255,255,.7)" stroke="none">
+              <circle cx="-6" cy="-5" r=".8"/>
+              <circle cx="5" cy="-6" r=".8"/>
+              <circle cx="-7" cy="3" r=".8"/>
+              <circle cx="6" cy="4" r=".8"/>
+              <circle cx="0" cy="-1" r="1"/>
+            </g>
+            <!-- ribbon -->
+            <path d="M-52,40 Q0,52 52,40 L52,52 Q0,62 -52,52 Z" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.55)"/>
+            <text x="0" y="50" font-family="serif" font-size="5.5" fill="rgba(255,255,255,.7)" text-anchor="middle" stroke="none" letter-spacing=".5">15 NOV · 1889</text>
+          </g>
+
+          <!-- bottom text -->
+          <text x="166" y="370" font-family="'Cinzel',serif" font-weight="600" font-size="20" fill="rgba(255,255,255,.95)" text-anchor="middle" letter-spacing="1.8">CARTEIRA DE TRABALHO</text>
+          <text x="166" y="402" font-family="'Cinzel',serif" font-weight="400" font-size="13" fill="rgba(255,255,255,.82)" text-anchor="middle" letter-spacing="3">E</text>
+          <text x="166" y="436" font-family="'Cinzel',serif" font-weight="600" font-size="20" fill="rgba(255,255,255,.95)" text-anchor="middle" letter-spacing="1.8">PREVIDÊNCIA SOCIAL</text>
+
+          <!-- decorative bottom line -->
+          <line x1="50" y1="460" x2="282" y2="460" stroke="rgba(255,255,255,.35)" stroke-width=".5"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AUTHORITY / QUEM SOMOS ============ -->
+<section class="authority" id="quem">
+  <div class="container">
+    <div class="auth-grid">
+      <div class="auth-side reveal">
+        <div class="sec-label">Quem Somos</div>
+        <h2>Mais de uma <em>década</em> defendendo trabalhadores em todo o Brasil.</h2>
+        <p>Irenilde Assis Advocacia é um escritório especializado em Direito do Trabalho, com expertise em ações individuais e coletivas, prevenção de litígios, negociação de acordos e consultoria trabalhista — atuando tanto preventiva quanto contenciosamente.</p>
+        <p>Nossa equipe é composta por profissionais comprometidos em solucionar seu problema de forma ética, transparente e profissional, com atendimento <strong>100% online</strong> em todo o território nacional.</p>
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-num">10<sub>+</sub></div>
+            <div class="stat-label">Anos de atuação</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">100<sub>%</sub></div>
+            <div class="stat-label">Atendimento online</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">5<sub>anos</sub></div>
+            <div class="stat-label">Retroativos pela CLT</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">24<sub>h</sub></div>
+            <div class="stat-label">Para retorno inicial</div>
+          </div>
+        </div>
+      </div>
+      <div class="lawyer-card reveal">
+        <div class="lawyer-photo-wrap">
+          <span class="lawyer-badge">Advogada Responsável</span>
+          <svg class="photo-fallback" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="bgPh" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#F8F2E4"/>
+                <stop offset="100%" stop-color="#E4D9C0"/>
+              </linearGradient>
+              <linearGradient id="goldPh" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#F2D58C"/>
+                <stop offset="45%" stop-color="#D4A951"/>
+                <stop offset="100%" stop-color="#8B6A1F"/>
+              </linearGradient>
+              <radialGradient id="haloPh" cx="50%" cy="42%" r="55%">
+                <stop offset="0%" stop-color="rgba(212,169,81,.25)"/>
+                <stop offset="100%" stop-color="rgba(212,169,81,0)"/>
+              </radialGradient>
+            </defs>
+            <rect width="400" height="500" fill="url(#bgPh)"/>
+            <rect width="400" height="500" fill="url(#haloPh)"/>
+            <!-- decorative ring -->
+            <circle cx="200" cy="205" r="135" fill="none" stroke="url(#goldPh)" stroke-width=".8" opacity=".45"/>
+            <circle cx="200" cy="205" r="118" fill="none" stroke="url(#goldPh)" stroke-width=".4" opacity=".3"/>
+            <!-- elegant silhouette -->
+            <g fill="#6E1320" opacity=".14">
+              <path d="M200 110 C172 110 152 132 152 162 C152 178 158 192 168 202 C156 208 148 220 148 234 L148 252 L252 252 L252 234 C252 220 244 208 232 202 C242 192 248 178 248 162 C248 132 228 110 200 110 Z"/>
+              <path d="M118 290 C118 268 142 252 200 252 C258 252 282 268 282 290 L282 500 L118 500 Z"/>
+            </g>
+            <!-- monogram -->
+            <text x="200" y="368" font-family="Cinzel, serif" font-size="58" font-weight="500" fill="url(#goldPh)" text-anchor="middle" letter-spacing="6">I·A</text>
+            <line x1="140" y1="395" x2="260" y2="395" stroke="url(#goldPh)" stroke-width=".6" opacity=".6"/>
+            <text x="200" y="418" font-family="Cinzel, serif" font-size="11" fill="#6E1320" text-anchor="middle" letter-spacing="3.5" opacity=".55">DRA. IRENILDE ASSIS</text>
+          </svg>
+          <img src="advogada.jpg" alt="Dra. Irenilde Assis, advogada trabalhista" loading="lazy" onerror="this.style.display='none'">
+          <div class="lawyer-name-strip">
+            <div class="nm">Dra. Irenilde Assis</div>
+            <div class="rl">OAB • Direito do Trabalho</div>
+          </div>
+        </div>
+        <div class="lawyer-quote">
+          <p>A CLT está do seu lado — e ela existe para te garantir direitos que talvez você nem imagine que tem. Meu trabalho é traduzir a lei em resultados reais para quem confiou no nosso escritório.</p>
+          <div class="sig">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.39 7.36H22l-6.19 4.5L18.18 22 12 17.27 5.82 22l2.37-8.14L2 9.36h7.61L12 2z"/></svg>
+            10+ anos defendendo trabalhadores
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process" id="processo">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-label">Como Atuamos</div>
+      <h2 class="sec-title">Um <em>processo claro</em>, sem juridiquês — do primeiro contato à indenização.</h2>
+    </div>
+    <div class="process-steps">
+      <div class="step reveal" data-num="01">
+        <h4>Conversa inicial gratuita</h4>
+        <p>Você nos conta sua situação pelo WhatsApp. Uma advogada analisa o caso e identifica o que pode ser pleiteado.</p>
+      </div>
+      <div class="step reveal" data-num="02">
+        <h4>Análise documental</h4>
+        <p>Reunimos contracheques, CTPS, mensagens, testemunhas e calculamos o valor real devido — sem promessas vazias.</p>
+      </div>
+      <div class="step reveal" data-num="03">
+        <h4>Ingresso da ação</h4>
+        <p>Protocolamos a reclamação trabalhista na Justiça do Trabalho e acompanhamos cada audiência e despacho.</p>
+      </div>
+      <div class="step reveal" data-num="04">
+        <h4>Acordo ou sentença</h4>
+        <p>Buscamos acordo vantajoso ou seguimos até a sentença final. Você é informado de cada etapa, sempre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-label">Perguntas Frequentes</div>
+      <h2 class="sec-title">Dúvidas que <em>todo trabalhador</em> deveria saber as respostas.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item open">
+        <div class="faq-q"><h4>Trabalhei sem carteira assinada e fui demitido. Quais são os meus direitos?</h4><div class="faq-toggle">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Você tem direito ao reconhecimento do vínculo trabalhista, saldo de salário, depósitos do FGTS e multa de 40%, férias proporcionais e vencidas (com adicional de 1/3), 13º proporcional, aviso prévio indenizado e seguro-desemprego. O cálculo correto depende da função, salário e tempo de serviço — por isso é fundamental ouvir uma advogada trabalhista.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Pedi demissão. Quais são os meus direitos?</h4><div class="faq-toggle">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Mesmo pedindo demissão, você tem direito a saldo de salário, férias vencidas e proporcionais (+1/3) e 13º proporcional. Não há direito ao saque do FGTS, multa de 40% ou seguro-desemprego — salvo em casos de rescisão indireta, quando o empregador descumpre o contrato e você pode pleitear todos os direitos de uma demissão sem justa causa.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Estou com problemas de saúde e fui mandado embora mesmo com atestado médico. É legal?</h4><div class="faq-toggle">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Não. Durante o período de atestado médico válido, o contrato está suspenso e a demissão pode ser considerada nula. Em alguns casos cabe indenização por danos morais, reintegração ao emprego e, se houver doença ocupacional, estabilidade por 12 meses após o retorno.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Quando o empregado tem direito a férias?</h4><div class="faq-toggle">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Após cada período de 12 meses trabalhados (período aquisitivo), o empregado tem direito a 30 dias de férias remuneradas com adicional de 1/3 constitucional. As férias devem ser concedidas nos 12 meses seguintes. Se não forem, há pagamento em dobro.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Empregada grávida pode ser demitida?</h4><div class="faq-toggle">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Não. A gestante tem estabilidade desde a confirmação da gravidez até cinco meses após o parto. A demissão arbitrária gera direito a reintegração ou indenização correspondente a todo o período de estabilidade, mesmo que a empresa alegue desconhecimento da gravidez.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Posso ser transferido de horário e perder o adicional noturno?</h4><div class="faq-toggle">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">O adicional noturno habitual incorpora-se ao salário pelo princípio da irredutibilidade. A jurisprudência protege o trabalhador contra alteração que cause prejuízo financeiro, sendo possível pleitear a diferença ou a manutenção do valor.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Empregada doméstica tem direito a férias?</h4><div class="faq-toggle">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Sim. Desde a Lei Complementar 150/2015 (PEC das Domésticas), as empregadas domésticas têm direito a 30 dias de férias com adicional de 1/3, FGTS, 13º, horas extras e demais direitos trabalhistas previstos na CLT.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Quanto tempo a empresa tem para pagar as verbas rescisórias?</h4><div class="faq-toggle">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">O prazo é de 10 dias corridos contados a partir do término do contrato. O descumprimento gera multa equivalente a um salário em favor do empregado, além de juros e correção monetária sobre o valor devido.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Posso receber periculosidade e insalubridade ao mesmo tempo?</h4><div class="faq-toggle">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">A CLT prevê que o trabalhador deve optar pelo adicional mais vantajoso. No entanto, a jurisprudência mais recente vem admitindo a cumulação quando os agentes geradores forem distintos e independentes, sendo cabível pleitear judicialmente.</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><h4>Qual a diferença entre insalubridade e periculosidade?</h4><div class="faq-toggle">+</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Insalubridade é exposição contínua a agentes que afetam a saúde (ruído, calor, produtos químicos) — adicional de 10%, 20% ou 40% do salário-mínimo. Periculosidade é exposição a risco de vida (eletricidade, inflamáveis, segurança privada) — adicional de 30% sobre o salário-base.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEAD FORM ============ -->
+<section class="leadform" id="contato">
+  <div class="container">
+    <div class="form-grid">
+      <div class="form-copy reveal">
+        <div class="sec-label">Análise gratuita do seu caso</div>
+        <h2>Conte-nos o que aconteceu — <em>nós ouvimos sem julgamentos</em>.</h2>
+        <p>Cada caso é único, e merece uma análise séria antes de qualquer decisão. Preencha o formulário ou fale agora pelo WhatsApp.</p>
+        <ul class="form-bullets">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Sem compromisso, sem cobrança pelo primeiro contato</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Sigilo absoluto sobre o que você nos contar</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Retorno em até 24h em dias úteis</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 100% online — atendemos todo o Brasil</li>
+        </ul>
+      </div>
+      <form class="form-card reveal" onsubmit="return submitForm(event)">
+        <h3>Fale com a advogada</h3>
+        <p class="small">Preencha em 1 minuto. Sua privacidade é protegida.</p>
+        <div class="field">
+          <label for="nome">Nome completo</label>
+          <input id="nome" type="text" required placeholder="Como devemos te chamar?">
+        </div>
+        <div class="field">
+          <label for="tel">WhatsApp com DDD</label>
+          <input id="tel" type="tel" required placeholder="(99) 99999-9999">
+        </div>
+        <div class="field">
+          <label for="assunto">Sobre o que precisa de ajuda?</label>
+          <select id="assunto" required>
+            <option value="">Selecione uma opção</option>
+            <option>Carteira não assinada / vínculo</option>
+            <option>Demissão ou rescisão indireta</option>
+            <option>Horas extras / jornada</option>
+            <option>Insalubridade / periculosidade</option>
+            <option>Acidente de trabalho</option>
+            <option>Assédio moral</option>
+            <option>Outro assunto</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">Conte resumidamente o que aconteceu</label>
+          <textarea id="msg" placeholder="Sem juridiquês — pode contar como contaria a um amigo."></textarea>
+        </div>
+        <button type="submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.83 14.06c-.25.7-1.43 1.34-2 1.41-.51.06-1.18.09-1.89-.12-.44-.13-1-.31-1.71-.62-3.01-1.3-4.97-4.32-5.12-4.52-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.59-.37.79-.37.2 0 .39 0 .57.01.18.01.42-.07.66.5.25.59.83 2.06.91 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.61.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.4-.25.66-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.35.07.13.07.75-.18 1.45z"/></svg>
+          Enviar pelo WhatsApp
+        </button>
+        <div class="disclaimer">Ao enviar, você concorda em ser contatado por nossa equipe. Não enviamos spam.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="finalcta">
+  <div class="container">
+    <h2 class="reveal">Não aceite ser lesado. <em>Recupere o que é seu por direito.</em></h2>
+    <p class="reveal">Quanto antes você agir, maiores são as chances de garantir todos os valores devidos. A primeira conversa é gratuita.</p>
+    <a class="btn-wa reveal" href="https://wa.me/5599981490417" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.83 14.06c-.25.7-1.43 1.34-2 1.41-.51.06-1.18.09-1.89-.12-.44-.13-1-.31-1.71-.62-3.01-1.3-4.97-4.32-5.12-4.52-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.59-.37.79-.37.2 0 .39 0 .57.01.18.01.42-.07.66.5.25.59.83 2.06.91 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.61.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.4-.25.66-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.35.07.13.07.75-.18 1.45z"/></svg>
+      Quero falar com a advogada agora
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-logo">
+          <div class="mono">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Assis & Carvalho">
+              <defs>
+                <linearGradient id="goldFoot" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#F2D58C"/>
+                  <stop offset="42%" stop-color="#D4A951"/>
+                  <stop offset="100%" stop-color="#8B6A1F"/>
+                </linearGradient>
+              </defs>
+              <g fill="url(#goldFoot)" font-family="'Cinzel',serif" font-weight="500">
+                <text x="6" y="92" font-size="108" letter-spacing="-8">A</text>
+                <text x="50" y="92" font-size="108" letter-spacing="-8">C</text>
+              </g>
+            </svg>
+          </div>
+          <div>
+            <div class="brand-text">Assis &amp; Carvalho</div>
+            <div class="brand-rule"></div>
+            <div class="brand-tag">Advocacia e Assessoria Jurídica</div>
+          </div>
+        </div>
+        <p>Escritório especializado em Direito do Trabalho, com mais de uma década de atuação na defesa de trabalhadores em todo o Brasil — de forma 100% online.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Contato</h5>
+        <ul>
+          <li>(99) 98149 0417</li>
+          <li>irenildeassis@hotmail.com</li>
+          <li>Rua Urbano Santos, 155 — sala 509<br>Ed. Aracati Office<br>Centro — Imperatriz/MA<br>CEP 65900-410</li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Atuação</h5>
+        <ul>
+          <li><a href="#servicos">Carteira não assinada</a></li>
+          <li><a href="#servicos">Rescisão e demissão</a></li>
+          <li><a href="#servicos">Horas extras</a></li>
+          <li><a href="#servicos">Insalubridade & periculosidade</a></li>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© <span id="yr"></span> Assis &amp; Carvalho Advocacia e Assessoria Jurídica — Todos os direitos reservados</div>
+      <div style="max-width:560px;text-align:right">Este site não é um produto Meta Platforms, Inc. ou Google LLC. Somos um escritório de advocacia conforme legislação vigente e Código de Ética da OAB.</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY WA ============ -->
+<a class="sticky-wa" href="https://wa.me/5599981490417" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm5.83 14.06c-.25.7-1.43 1.34-2 1.41-.51.06-1.18.09-1.89-.12-.44-.13-1-.31-1.71-.62-3.01-1.3-4.97-4.32-5.12-4.52-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.04-2.49.27-.3.59-.37.79-.37.2 0 .39 0 .57.01.18.01.42-.07.66.5.25.59.83 2.06.91 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.18-.31.4-.45.54-.15.15-.3.31-.13.61.18.3.79 1.31 1.7 2.12 1.17 1.04 2.16 1.36 2.46 1.51.3.15.48.13.66-.08.18-.2.76-.89.96-1.19.2-.3.4-.25.66-.15.27.1 1.69.8 1.98.94.29.15.49.22.56.35.07.13.07.75-.18 1.45z"/></svg>
+  <span>Falar agora</span>
+</a>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.addEventListener('click',()=>{
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Footer year
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Form submit -> WhatsApp
+  function submitForm(e){
+    e.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+    const tel = document.getElementById('tel').value.trim();
+    const assunto = document.getElementById('assunto').value;
+    const msg = document.getElementById('msg').value.trim();
+    const text = `Olá! Meu nome é ${nome}.%0AWhatsApp: ${tel}%0AAssunto: ${assunto}%0A%0A${encodeURIComponent(msg)}`;
+    window.open(`https://wa.me/5599981490417?text=${text}`,'_blank');
+    return false;
+  }
+</script>
+</body>
+</html>
