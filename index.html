@@ -443,9 +443,52 @@
     background:radial-gradient(circle at 80% 30%,rgba(176,138,62,.12),transparent 50%);
     z-index:0;
   }
-  .auth-grid{
-    display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;
+  .auth-intro{
+    max-width:780px;margin:0 auto 60px;text-align:center;
     position:relative;z-index:2;
+  }
+  .auth-intro .sec-label{color:var(--gold-soft);margin-bottom:18px}
+  .auth-intro h2{
+    font-family:'Fraunces',serif;font-weight:400;
+    font-size:clamp(34px,4vw,56px);line-height:1.05;
+    margin-bottom:24px;letter-spacing:-.02em;
+  }
+  .auth-intro h2 em{color:var(--gold-soft);font-style:italic}
+  .auth-intro p{
+    color:rgba(245,239,227,.78);font-size:17px;line-height:1.7;
+  }
+  .stats-strip{
+    display:grid;grid-template-columns:repeat(4,1fr);
+    border-top:1px solid rgba(245,239,227,.15);
+    border-bottom:1px solid rgba(245,239,227,.15);
+    margin:0 auto 70px;max-width:980px;
+    position:relative;z-index:2;
+  }
+  .stats-strip .stat{
+    padding:32px 16px;text-align:center;
+    border-right:1px solid rgba(245,239,227,.15);
+  }
+  .stats-strip .stat:last-child{border-right:none}
+  .stats-strip .stat-num{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:46px;line-height:1;color:var(--cream);
+    margin-bottom:8px;letter-spacing:-.02em;
+  }
+  .stats-strip .stat-num sub{font-size:18px;color:var(--gold-soft);vertical-align:super;font-weight:400}
+  .stats-strip .stat-label{
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:rgba(245,239,227,.6);
+  }
+  .lawyers-grid{
+    display:grid;grid-template-columns:1fr 1fr;gap:32px;
+    position:relative;z-index:2;
+  }
+  @media (max-width:880px){
+    .lawyers-grid{grid-template-columns:1fr;gap:40px}
+    .stats-strip{grid-template-columns:1fr 1fr}
+    .stats-strip .stat:nth-child(2){border-right:none}
+    .stats-strip .stat:nth-child(1),
+    .stats-strip .stat:nth-child(2){border-bottom:1px solid rgba(245,239,227,.15)}
   }
   .auth-side .sec-label{color:var(--gold-soft)}
   .auth-side h2{
@@ -1078,65 +1121,37 @@
 <!-- ============ AUTHORITY / QUEM SOMOS ============ -->
 <section class="authority" id="quem">
   <div class="container">
-    <div class="auth-grid">
-      <div class="auth-side reveal">
-        <div class="sec-label">Quem Somos</div>
-        <h2>Mais de uma <em>década</em> defendendo trabalhadores em todo o Brasil.</h2>
-        <p>Irenilde Assis Advocacia é um escritório especializado em Direito do Trabalho, com expertise em ações individuais e coletivas, prevenção de litígios, negociação de acordos e consultoria trabalhista — atuando tanto preventiva quanto contenciosamente.</p>
-        <p>Nossa equipe é composta por profissionais comprometidos em solucionar seu problema de forma ética, transparente e profissional, com atendimento <strong>100% online</strong> em todo o território nacional.</p>
-        <div class="stats">
-          <div class="stat">
-            <div class="stat-num">10<sub>+</sub></div>
-            <div class="stat-label">Anos de atuação</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">100<sub>%</sub></div>
-            <div class="stat-label">Atendimento online</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">5<sub>anos</sub></div>
-            <div class="stat-label">Retroativos pela CLT</div>
-          </div>
-          <div class="stat">
-            <div class="stat-num">24<sub>h</sub></div>
-            <div class="stat-label">Para retorno inicial</div>
-          </div>
-        </div>
+    <div class="auth-intro reveal">
+      <div class="sec-label">Quem Somos</div>
+      <h2>Assis &amp; Carvalho — uma <em>década</em> dedicada a quem trabalha.</h2>
+      <p>Somos um escritório especializado em Direito do Trabalho, fundado por duas sócias que acreditam em advocacia técnica, ética e próxima do cliente. Atuamos em ações individuais e coletivas, prevenção de litígios, negociação de acordos e consultoria — com atendimento <strong>100% online</strong> em todo o território nacional.</p>
+    </div>
+
+    <div class="stats-strip reveal">
+      <div class="stat">
+        <div class="stat-num">10<sub>+</sub></div>
+        <div class="stat-label">Anos de atuação</div>
       </div>
+      <div class="stat">
+        <div class="stat-num">100<sub>%</sub></div>
+        <div class="stat-label">Atendimento online</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5<sub>anos</sub></div>
+        <div class="stat-label">Retroativos pela CLT</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">24<sub>h</sub></div>
+        <div class="stat-label">Para retorno inicial</div>
+      </div>
+    </div>
+
+    <div class="lawyers-grid">
+
+      <!-- Card 1 — Dra. Irenilde Assis -->
       <div class="lawyer-card reveal">
         <div class="lawyer-photo-wrap">
-          <span class="lawyer-badge">Advogada Responsável</span>
-          <svg class="photo-fallback" viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-            <defs>
-              <linearGradient id="bgPh" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#F8F2E4"/>
-                <stop offset="100%" stop-color="#E4D9C0"/>
-              </linearGradient>
-              <linearGradient id="goldPh" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#F2D58C"/>
-                <stop offset="45%" stop-color="#D4A951"/>
-                <stop offset="100%" stop-color="#8B6A1F"/>
-              </linearGradient>
-              <radialGradient id="haloPh" cx="50%" cy="42%" r="55%">
-                <stop offset="0%" stop-color="rgba(212,169,81,.25)"/>
-                <stop offset="100%" stop-color="rgba(212,169,81,0)"/>
-              </radialGradient>
-            </defs>
-            <rect width="400" height="500" fill="url(#bgPh)"/>
-            <rect width="400" height="500" fill="url(#haloPh)"/>
-            <!-- decorative ring -->
-            <circle cx="200" cy="205" r="135" fill="none" stroke="url(#goldPh)" stroke-width=".8" opacity=".45"/>
-            <circle cx="200" cy="205" r="118" fill="none" stroke="url(#goldPh)" stroke-width=".4" opacity=".3"/>
-            <!-- elegant silhouette -->
-            <g fill="#6E1320" opacity=".14">
-              <path d="M200 110 C172 110 152 132 152 162 C152 178 158 192 168 202 C156 208 148 220 148 234 L148 252 L252 252 L252 234 C252 220 244 208 232 202 C242 192 248 178 248 162 C248 132 228 110 200 110 Z"/>
-              <path d="M118 290 C118 268 142 252 200 252 C258 252 282 268 282 290 L282 500 L118 500 Z"/>
-            </g>
-            <!-- monogram -->
-            <text x="200" y="368" font-family="Cinzel, serif" font-size="58" font-weight="500" fill="url(#goldPh)" text-anchor="middle" letter-spacing="6">I·A</text>
-            <line x1="140" y1="395" x2="260" y2="395" stroke="url(#goldPh)" stroke-width=".6" opacity=".6"/>
-            <text x="200" y="418" font-family="Cinzel, serif" font-size="11" fill="#6E1320" text-anchor="middle" letter-spacing="3.5" opacity=".55">DRA. IRENILDE ASSIS</text>
-          </svg>
+          <span class="lawyer-badge">Sócia · Fundadora</span>
           <img src="advogada.jpg" alt="Dra. Irenilde Assis, advogada trabalhista" loading="lazy" onerror="this.style.display='none'">
           <div class="lawyer-name-strip">
             <div class="nm">Dra. Irenilde Assis</div>
@@ -1144,13 +1159,33 @@
           </div>
         </div>
         <div class="lawyer-quote">
-          <p>A CLT está do seu lado — e ela existe para te garantir direitos que talvez você nem imagine que tem. Meu trabalho é traduzir a lei em resultados reais para quem confiou no nosso escritório.</p>
+          <p>A CLT está do seu lado — e ela existe para garantir direitos que talvez você nem imagine que tem. Meu trabalho é traduzir a lei em resultado real para quem confiou no escritório.</p>
           <div class="sig">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.39 7.36H22l-6.19 4.5L18.18 22 12 17.27 5.82 22l2.37-8.14L2 9.36h7.61L12 2z"/></svg>
             10+ anos defendendo trabalhadores
           </div>
         </div>
       </div>
+
+      <!-- Card 2 — Dra. Vera Carvalho -->
+      <div class="lawyer-card reveal">
+        <div class="lawyer-photo-wrap">
+          <span class="lawyer-badge">Sócia · Advogada</span>
+          <img src="vera-carvalho.jpg" alt="Dra. Vera Carvalho, advogada trabalhista" loading="lazy" onerror="this.style.display='none'">
+          <div class="lawyer-name-strip">
+            <div class="nm">Dra. Vera Carvalho</div>
+            <div class="rl">OAB • Direito do Trabalho</div>
+          </div>
+        </div>
+        <div class="lawyer-quote">
+          <p>Direito do trabalho exige técnica e escuta. Defendemos cada cliente com a mesma dedicação — do primeiro contato à decisão final, com transparência em cada etapa.</p>
+          <div class="sig">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.39 7.36H22l-6.19 4.5L18.18 22 12 17.27 5.82 22l2.37-8.14L2 9.36h7.61L12 2z"/></svg>
+            Atuação ética e estratégica
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1334,7 +1369,7 @@
         <ul>
           <li>(99) 98149 0417</li>
           <li>irenildeassis@hotmail.com</li>
-          <li>Rua Urbano Santos, 155 — sala 509<br>Ed. Aracati Office<br>Centro — Imperatriz/MA<br>CEP 65900-410</li>
+          <li>Atendimento 100% online em todo o Brasil</li>
         </ul>
       </div>
       <div class="foot-col">
